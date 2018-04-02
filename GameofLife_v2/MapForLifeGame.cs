@@ -9,10 +9,9 @@ namespace GameofLife_v2
     public class MapForLifeGame
     {
         /// <summary>
-        /// PrintArrayonConsole() drukuje tablice na console kolorując wartości żywe(1) na kolor czerwony, a martwe(0) na kolor biały
+        /// PrintArrayonConsole() drukuje tablice na konsole kolorując wartości żywe(1) na kolor czerwony, a martwe(0) na kolor biały
         /// </summary>
-        /// <param name="MapToPrint">tablica dwuwymiarowa do wydrukowania</param>
-        /// <param name="MapRowsAndColumns">wielkośc tablicy</param>
+        /// <param name="MapToPrint">tablica dwuwymiarowa o wartościach 0 lub 1, do wydrukowania</param>
         public void PrintArrayonConsole(int[,] MapToPrint)
         {
             Console.WriteLine("Tablica Gry Game of Life");
@@ -44,7 +43,6 @@ namespace GameofLife_v2
         /// <summary>
         /// CreateAndFill2DMapWithRandom() wypełnia tablice randomowo wartościami 1(żywe)
         /// </summary>
-        /// <param name="mapRowsAndColumns"></param>
         /// <param name="maxStartingLifeOnArray">maksymalna liczba żyjących komórek - może być mniejsza, ale nie będzie wieksza niż podana liczna int</param>
         /// <returns></returns>
         public int[,] CreateAndFill2DMapWithRandom(int mapRowsAndColumns, int maxStartingLifeOnArray)
