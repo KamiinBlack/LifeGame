@@ -15,7 +15,6 @@ namespace GameofLife_v2
         /// <param name="maptoCheckNeighbours"> tablica z wartościami 0,1</param>
         /// <param name="filedInMapX"> współrzędne X pojedynczego pola </param>
         /// <param name="filedInMapY"> współrzędne Y pojedynczego pola </param>
-        /// <param name="mapRowsAndColumns"> wielkośc tablicy </param>
         /// <returns></returns>
 
         public int NeighboursCounter(int[,] maptoCheckNeighbours, int filedInMapX, int filedInMapY)
@@ -32,10 +31,9 @@ namespace GameofLife_v2
             return counter - maptoCheckNeighbours[filedInMapX, filedInMapY];
         }
         /// <summary>
-        /// CheckIfFieldIsAlive() wybiera jedo pole i po sprawdzeniu ilości sąsiadów decyduje czy pole ma utrzymac obecną wartośc czy ją zmienić 
+        /// CheckIfFieldIsAlive() sprawdza sąsiadów wszystkich pól i zmienia tablicę przekazaną do funkcji
         /// </summary>
-        /// <param name="maptoCheckLife">tablica z wartościami 0,1</param>
-        /// <param name="mapRowsAndColumns">wielkośc tablicy</param>
+        /// <param name="maptoCheckLife">tablica z wartościami 0 lub 1</param>
         public void CheckIfFieldIsAlive(ref int[,] maptoCheckLife)
         {
             int[,] backupMapArray2d = new int [maptoCheckLife.GetLength(0),maptoCheckLife.GetLength(1)];
