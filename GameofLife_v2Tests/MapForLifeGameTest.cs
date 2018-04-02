@@ -44,7 +44,7 @@ namespace GameofLife_v2.Tests
             OneFieldInMapForLifeGame a = new OneFieldInMapForLifeGame();
             int[,] tab = new int[,] { { 1, 1 }, { 0, 0 }};
            
-            a.CheckIfFieldIsAlive(tab);
+            a.CheckIfFieldIsAlive(ref tab);
             int c = 0;
             for (int i = 0; i < 2; i++)
             {
